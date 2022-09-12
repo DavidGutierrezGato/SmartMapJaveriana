@@ -14,8 +14,8 @@ public class movxd : MonoBehaviour
     public GameObject originalPos;
     void Update()
     {
-        float xAxisValue = joystick.Horizontal * Speed;
-        float zAxisValue = joystick.Vertical * Speed;
+        float xAxisValue = joystick.Horizontal * Speed ;
+        float zAxisValue = joystick.Vertical * Speed ;
         float yValue = 0.0f;
 
         if (Input.GetKey(KeyCode.Q))
