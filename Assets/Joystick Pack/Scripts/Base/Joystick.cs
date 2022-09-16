@@ -90,9 +90,9 @@ public class Joystick : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoint
     private void FormatInput()
     {
         if (axisOptions == AxisOptions.Horizontal)
-            input = new Vector2(input.x, 0f);
-        else if (axisOptions == AxisOptions.Vertical)
             input = new Vector2(0f, input.y);
+        else if (axisOptions == AxisOptions.Vertical)
+            input = new Vector2(input.x, 0f );
     }
 
     private float SnapFloat(float value, AxisOptions snapAxis)
@@ -106,18 +106,18 @@ public class Joystick : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoint
             if (snapAxis == AxisOptions.Horizontal)
             {
                 if (angle < 22.5f || angle > 157.5f)
-                    return 0;
+                    return 0 + 0.5f;
                 else
-                    return (value > 0) ? 1 : -1;
+                    return (value > 0) ? 1 + 0.5f : -1 + 0.5f;
             }
             else if (snapAxis == AxisOptions.Vertical)
             {
                 if (angle > 67.5f && angle < 112.5f)
-                    return 0;
+                    return 0 + 0.5f;
                 else
-                    return (value > 0) ? 1 : -1;
+                    return (value > 0) ? 1 + 0.5f : -1 + 0.5f;
             }
-            return value;
+            return value + 0.5f;
         }
         else
         {

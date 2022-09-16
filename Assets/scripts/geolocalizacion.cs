@@ -8,40 +8,70 @@ using UnityEngine.PlayerLoop;
 public class geolocalizacion : MonoBehaviour
 {
     // Start is called before the first frame update
+    
+    //public static geolocalizacion Instance { set; get; }
 
-    public static geolocalizacion Instance { set; get; }
+    public decimal minimoLatY = 4.62653170926943M;
+    public decimal minimoLongX = -74.0654885831475M;
 
-    private float minimoLat = 4.631278950873927f;
-    private float minimoLong = -74.06410894791222f;
+    public decimal maximoLatY = 4.63116268860274M;
+    public decimal maximoLongX = -74.0618383379272M;
 
-    float maximoLat = 4.625898481742873f;
-    float maximoLong = -74.06247035270383f;
 
-    public float minimoMapaLat;
-    public float minimoMapaLong;
+    public decimal diffX;
+    public decimal diffY;
 
-    public float maximoMapaLat;
-    public float maximoMapaLong;
+    public decimal factorX;
+    public decimal factorY;
 
-    public float latitud;
-    public float longitud;
+
+    public decimal minimoMapaLat;
+    public decimal minimoMapaLong;
+
+    public decimal maximoMapaLat;
+    public decimal maximoMapaLong;
+
+    public decimal latitud = 4.62605184066525M;
+    public decimal longitud = -74.0627447697475M;
+
+    public decimal latitudMY;
+    public decimal longitudMX;
 
     public int tiempoEspera = 50;
 
     void Start()
     {
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
-       // StartCoroutine(darUbicacion());
+        //Instance = this;
+        //DontDestroyOnLoad(gameObject);
+        // StartCoroutine(darUbicacion());
+
+
+        diffX = maximoLongX - minimoLongX;
+        diffY = maximoLatY - minimoLatY;
+
+        factorX = 373 / diffX;
+        factorY = 534/ diffY;
+
+        //factorX = 102184.916;
+        //factorY = 115310.383;
+
+        latitudMY = (latitud - minimoLatY) * factorY;
+        longitudMX = (longitud - minimoLongX) * factorX;
+
+
+        Debug.Log("diffX: " + diffX + "  diffY: " + diffY);
+        Debug.Log("factorX: " + factorX + "  factorY: " + factorY);
+        Debug.Log("X: " + longitudMX + " Y: " + latitudMY);
+
     }
 
     private void Update()
     {
-        Debug.Log("entre");
+        //Debug.Log("entre");
 
         if (!Input.location.isEnabledByUser)
         {
-            Debug.Log("no habilito el GPS");
+           // Debug.Log("no habilito el GPS");
            
         }
 
@@ -68,15 +98,27 @@ public class geolocalizacion : MonoBehaviour
 
 
 
-        latitud = Input.location.lastData.latitude;
+      //  latitud = Input.location.lastData.latitude;
 
-        longitud = Input.location.lastData.longitude;
+      //  longitud = Input.location.lastData.longitude;
 
+        //latitudMY = (latitud - minimoLatY) * factorY;
+        //longitudMX = (longitud - minimoLongX) * factorX;
 
-        Debug.Log("Lat: " + latitud + " Long: " + longitud);
+      //Debug.Log("X: " + longitudMX + " Y: " + latitudMY);
 
        
 
+    }
+
+    public decimal getLongitudX()
+    {
+        return this.longitudMX;
+    }
+
+    public decimal getLatitudY()
+    {
+        return this.latitudMY;
     }
 
 }
