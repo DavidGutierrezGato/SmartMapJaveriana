@@ -85,25 +85,25 @@ public class geolocalizacion : MonoBehaviour
 
         if (tiempoEspera <= 0)
         {
-            Debug.Log("Se acabo el tiempo");
+           // Debug.Log("Se acabo el tiempo");
              
         }
 
         if (Input.location.status == LocationServiceStatus.Failed)
         {
-            Debug.Log("No se pudo obtener la ubicacion");
+           // Debug.Log("No se pudo obtener la ubicacion");
            
         }
 
 
 
 
-      //  latitud = Input.location.lastData.latitude;
+        latitud = (decimal)Input.location.lastData.latitude;
 
-      //  longitud = Input.location.lastData.longitude;
+        longitud = (decimal)Input.location.lastData.longitude;
 
-        //latitudMY = (latitud - minimoLatY) * factorY;
-        //longitudMX = (longitud - minimoLongX) * factorX;
+        latitudMY = (latitud - minimoLatY) * factorY;
+        longitudMX = (longitud - minimoLongX) * factorX;
 
       //Debug.Log("X: " + longitudMX + " Y: " + latitudMY);
 

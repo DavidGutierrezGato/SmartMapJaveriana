@@ -29,12 +29,12 @@ public class movxd : MonoBehaviour
 
         if(transform.position.x < minX)
         {
-            transform.position = new Vector3(-10f, transform.position.y + yValue, transform.position.z + zAxisValue);
+            transform.position = new Vector3(minX, transform.position.y + yValue, transform.position.z + zAxisValue);
         }
 
         if (transform.position.x > maxX)
         {
-            transform.position = new Vector3(10f, transform.position.y + yValue, transform.position.z + zAxisValue);
+            transform.position = new Vector3(maxX, transform.position.y + yValue, transform.position.z + zAxisValue);
         }
         
         if (transform.position.z < minZ)
