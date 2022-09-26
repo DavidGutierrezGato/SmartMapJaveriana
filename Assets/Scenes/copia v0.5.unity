@@ -1767,10 +1767,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Camera: {fileID: 1651777257}
-  Rotate: 0
-  DecreaseCameraPanSpeed: 1
-  CameraUpperHeightBound: 40
-  CameraLowerHeightBound: 115
+  Rotate: 1
+  DecreaseCameraPanSpeed: 2
+  CameraUpperHeightBound: 80
+  CameraLowerHeightBound: 80
 --- !u!4 &452700109
 Transform:
   m_ObjectHideFlags: 0
@@ -2073,7 +2073,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &614475740
 Transform:
   m_ObjectHideFlags: 0
@@ -2609,11 +2609,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffddcdfbcf1a1ed49a98e380bd0d86e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radio: 80
+  radio: 100
   capa:
     serializedVersion: 2
     m_Bits: 64
   masCercano: {fileID: 0}
+--- !u!1 &730119013
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 730119014}
+  m_Layer: 0
+  m_Name: bordes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &730119014
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730119013}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 25
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &783004134
 GameObject:
   m_ObjectHideFlags: 0
@@ -2632,7 +2663,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &783004135
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4303,7 +4334,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1442079953
 Transform:
   m_ObjectHideFlags: 0
@@ -5122,7 +5153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 054830fa47b0e41438f5b9f99b29522e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ZoomMinBound: 20
+  ZoomMinBound: 60
   ZoomMaxBound: 120
   cam: {fileID: 1651777257}
 --- !u!81 &1651777260
@@ -5161,6 +5192,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   edificioUI: {fileID: 1108023412}
+  seg: 0
+  maxSeg: 2
 --- !u!1 &1654054711
 GameObject:
   m_ObjectHideFlags: 0
@@ -6109,7 +6142,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1892391755
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6270,7 +6303,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1911554058
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6700,7 +6733,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &2076868433
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7028,7 +7061,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &2118322480
 BoxCollider:
   m_ObjectHideFlags: 0

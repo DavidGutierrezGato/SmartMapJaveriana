@@ -16,11 +16,13 @@ public class actualizarGPS : MonoBehaviour
         if(geo.getLongitudX() < 550 && geo.getLongitudX() > -270 &&
             geo.getLatitudY() < 700 && geo.getLatitudY() > -100)
         {
+            persona.gameObject.SetActive(true);
             persona.position = new Vector3((float)geo.getLongitudX(), persona.position.y, (float)geo.getLatitudY());
         }
         else
         {
-            Debug.Log("no esta en la universidad");
+            // Debug.Log("no esta en la universidad");
+            persona.gameObject.SetActive(false);
         }
         
     }

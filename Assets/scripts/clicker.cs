@@ -9,6 +9,8 @@ public class clicker : MonoBehaviour
    
     public edificioUIScript edificioUI;
     private edificio seleccionado;
+    public int seg = 0;
+    public int maxSeg = 2;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +23,7 @@ public class clicker : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(0))
         {
+            seg++;
             RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             print("dispare");
@@ -32,8 +35,13 @@ public class clicker : MonoBehaviour
                     print("pegue");
                     if (hit.transform.gameObject.CompareTag("edificio") == true)
                     {
+                        seg++;
+                        if(seg > maxSeg)
+                        {
+                            MostrarInfo(hit.transform.gameObject);
+                            seg = 0;
+                        }
                         
-                        MostrarInfo(hit.transform.gameObject);
                         
                     }
                     else if (hit.transform.gameObject.CompareTag("ui") == true)
@@ -44,6 +52,7 @@ public class clicker : MonoBehaviour
                     }
                     else
                     {
+                        seg--;
                         //edificioUI.hide();
                     }
                     
@@ -59,6 +68,11 @@ public class clicker : MonoBehaviour
                 //edificioUI.hide();
             }
         }
+        else
+        {
+           // seg = 0;
+        }
+        
             
 
     }
