@@ -13,17 +13,7 @@ public class nodo : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        foreach (GameObject obj in vecinos)
-        {
-            LineRenderer lineRenderer2 = new LineRenderer();
-            lineRenderer2 = lineRenderer;
-            lineRenderer2.positionCount = vecinos.Count;
-            
-            //lineRenderer2.SetPosition(c, this.transform.position);
-            lineRenderer2.SetPosition(c, obj.transform.position);
-            c++;
-
-        }
+        
     }
 
     // Update is called once per frame
@@ -31,6 +21,23 @@ public class nodo : MonoBehaviour
     {
         
        
+    }
+
+    public void pintarRuta()
+    {
+        //lineRenderer = new LineRenderer();
+        foreach (GameObject obj in vecinos)
+        {
+            //LineRenderer lineRenderer2 = new LineRenderer();
+           
+            lineRenderer.positionCount = vecinos.Count;
+
+            //lineRenderer2.SetPosition(c, this.transform.position);
+            lineRenderer.SetPosition(c, obj.transform.position);
+            c++;
+
+        }
+        c = 0;
     }
 
 
