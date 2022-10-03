@@ -7,16 +7,15 @@ public class edificio : MonoBehaviour
 {
     public string nombre;
     public int capacidad;
+    public int numero;
     public List<GameObject> entradas;
     public GameObject techo;
-    private Color normal = Color.red;
-    private Color seleccionado = Color.green;
-    public Material Mnormal;
-    public Material Mselec;
-    public Material miMaterial;
+    
 
     public string Nombre { get => nombre; set => nombre = value; }
     public int Capacidad { get => capacidad; set => capacidad = value; }
+
+    public int Numero { get => numero; set => numero = value; }
     public List<GameObject> Entradas { get => entradas; set => entradas = value; }
    
     // Start is called before the first frame update
@@ -33,22 +32,23 @@ public class edificio : MonoBehaviour
         
     }
 
-    public edificio(string nombre, int capacidad, List<GameObject> entradas)
+    public edificio(string nombre, int capacidad, List<GameObject> entradas, int numero)
     {
         this.Nombre = nombre;
         this.capacidad = capacidad;
         this.entradas = entradas;
+        this.numero = numero;
     }
 
     public void fijarEdificio()
     {
-        miMaterial = Mselec;
+      
     }
 
     public void desmarcarEdificio()
     {
         //renderer.material.color = normal;
-        miMaterial = Mnormal;
+       // miMaterial = Mnormal;
         //gameObject.GetComponent<MeshRenderer>().materials[0].color = normal;
     }
 

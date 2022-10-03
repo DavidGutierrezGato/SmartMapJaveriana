@@ -26,14 +26,14 @@ public class sensor : MonoBehaviour
 
     IEnumerator obtenerMasCercano()
     {
-        Debug.Log("comparando");
+        //Debug.Log("comparando");
         Collider[] colliders = Physics.OverlapSphere(transform.position, radio, capa);
         Array.Sort(colliders, new comparadorDistancias(transform));
 
         //masCercano = colliders[0].GetComponent<GameObject>();
         foreach (Collider collider in colliders)
         {
-            Debug.Log(collider.name);
+            //Debug.Log(collider.name);
         }
         if (colliders.Length > 0)
         {
