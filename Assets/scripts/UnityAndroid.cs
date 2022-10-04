@@ -29,7 +29,7 @@ public class UnityAndroid : MonoBehaviour
         AndroidJavaClass unityPlayerClass = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
         AndroidJavaObject unityPlayerActivity = unityPlayerClass.GetStatic<AndroidJavaObject>("currentActivity");
 
-        unityPlayerActivity.Call("informacionEdificioAndroid", numeroEdificio);
+        unityPlayerActivity.CallStatic("informacionEdificioAndroid", numeroEdificio);
     }
 
         //Calcular Ruta
@@ -49,7 +49,7 @@ public class UnityAndroid : MonoBehaviour
 
 
         string parametros = "pruebaaaa";
-        unityPlayerActivity.Call("informacionEdificioAndroid",parametros );
+        unityPlayerActivity.CallStatic("informacionEdificioAndroid",parametros );
 
     }
 

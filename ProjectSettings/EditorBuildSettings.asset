@@ -11,7 +11,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/pruebaMapa.unity
     guid: b6e07d70ba4d45a41a4ad9b3bb22d113
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/copia v0.5.unity
     guid: daa2d7690e4fc4940b0934a1b9910b5a
+  - enabled: 1
+    path: Assets/Scenes/copia v0.8.unity
+    guid: be13556fe36dd8d45a11eb1109f20e53
   m_configObjects: {}

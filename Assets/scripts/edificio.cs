@@ -10,6 +10,7 @@ public class edificio : MonoBehaviour
     public int numero;
     public List<GameObject> entradas;
     public GameObject techo;
+    //public GameObject particulaSeleccion;
     
 
     public string Nombre { get => nombre; set => nombre = value; }
@@ -23,7 +24,9 @@ public class edificio : MonoBehaviour
     {
         entradas = new List<GameObject>();
         desmarcarEdificio();
-       
+        
+        techo.transform.position = new Vector3(techo.transform.position.x, techo.transform.position.y+13, techo.transform.position.z);
+        //particulaSeleccion.transform.position = new Vector3(techo.transform.position.x, techo.transform.position.y, techo.transform.position.z);
     }
 
     // Update is called once per frame
