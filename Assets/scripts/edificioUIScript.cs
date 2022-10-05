@@ -21,10 +21,10 @@ public class edificioUIScript : MonoBehaviour
     {
         panel.transform.LookAt(Camera.main.transform.position) ;
         panel.transform.eulerAngles = new Vector3(
-     panel.transform.eulerAngles.x,
-     panel.transform.eulerAngles.y + 180,
-     panel.transform.eulerAngles.z
- );
+         panel.transform.eulerAngles.x,
+         panel.transform.eulerAngles.y + 180,
+         panel.transform.eulerAngles.z
+        );
 
 
         //ui.transform.rotation = new Quaternion(0, 0, 0, 90);

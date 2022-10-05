@@ -9,11 +9,12 @@ public class nodo : MonoBehaviour
     public List<GameObject> vecinos = new List<GameObject>();
     public LineRenderer lineRenderer;
     private int c = 0;
+    public float radio = 30f;
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        Gizmos.DrawSphere(this.transform.position, radio);
     }
 
     // Update is called once per frame
@@ -21,6 +22,24 @@ public class nodo : MonoBehaviour
     {
         
        
+    }
+
+    private void OnDrawGizmos()
+    {
+        
+
+        if (vecinos.Count != 0)
+        {
+            Gizmos.color = Color.red;
+            
+            foreach(GameObject vecino in vecinos)
+            {
+                Gizmos.DrawLine(this.transform.position, vecino.transform.position);
+            }
+            
+        }
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(transform.position, radio);
     }
 
     public void pintarRuta()
