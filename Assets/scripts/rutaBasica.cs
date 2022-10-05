@@ -22,14 +22,15 @@ public class rutaBasica : MonoBehaviour
 
     public void calcularRutaBasicaR(List<GameObject> ruta,GameObject inicio, GameObject destino)
     {
-        if(Vector3.Distance(inicio.transform.position, destino.transform.position) < 10f)
+        if(Vector3.Distance(inicio.transform.position, destino.transform.position) < 10f || 
+                inicio.name == destino.name)
         {
             //ruta.Add(destino);
             return;
         }
 
         List<GameObject> vecinosNodo = inicio.GetComponent<nodo>().vecinos;
-        float distanciaMinima = 1000000f;
+        float distanciaMinima = 100000000000f;
         GameObject ganador = null;
         foreach (GameObject veci in vecinosNodo)
         {
