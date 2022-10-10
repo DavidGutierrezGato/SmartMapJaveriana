@@ -50,8 +50,9 @@ public class rutaBasica : MonoBehaviour
 
 
     }
-    public void calcularRutaBasica()
+    public void calcularRutaBasica(GameObject des)
     {
+        destino = des;
         GameObject inicio = sensor.masCercano;
         List<GameObject> ruta = new List<GameObject>();
         List<GameObject> visitados = new List<GameObject>();

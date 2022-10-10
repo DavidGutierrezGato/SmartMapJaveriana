@@ -22,7 +22,7 @@ public class edificio : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        entradas = new List<GameObject>();
+        //entradas = new List<GameObject>();
         desmarcarEdificio();
         
         techo.transform.position = new Vector3(techo.transform.position.x, techo.transform.position.y+13, techo.transform.position.z);

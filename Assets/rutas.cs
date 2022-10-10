@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class rutas : MonoBehaviour
 {
@@ -12,12 +13,17 @@ public class rutas : MonoBehaviour
     public float distanciaEntre = 0.1f;
     public bool empezo = false;
     public GameObject linea;
-     
+    public GameObject canvasCancelar;
+    public GameObject botonCancelar;
+    public sensor sensor;
+
 
     void Start()
     {
         //this.transform.position = nodos[indice].transform.position;
         //indice++;
+        canvasCancelar.SetActive(false);
+        botonCancelar.SetActive(false);
     }
 
     // Update is called once per frame
@@ -25,7 +31,7 @@ public class rutas : MonoBehaviour
     {
         if(empezo)
         {
-            this.transform.position = Vector3.MoveTowards(this.transform.position, nodos[indice].transform.position, velocidad * Time.deltaTime);
+            //this.transform.position = Vector3.MoveTowards(this.transform.position, nodos[indice].transform.position, velocidad * Time.deltaTime);
 
             if (Vector3.Distance(this.transform.position, nodos[indice].transform.position) < distanciaEntre)
             {
@@ -39,6 +45,13 @@ public class rutas : MonoBehaviour
                 linea.SetActive(false);
 
             }
+            if(sensor.masCercano.name == nodos[nodos.Count-1].name)
+            {
+                indice = 0;
+                empezo = false;
+                linea.SetActive(false);
+                pararRuta();
+            }
         }
         
     }
@@ -50,6 +63,34 @@ public class rutas : MonoBehaviour
         indice++;
         empezo = true;
         linea.SetActive(true);
-        
+        botonCancelar.SetActive(true);
+
     }
+
+    public void pararRuta()
+    {
+        indice = 0;
+        empezo = false;
+        linea.SetActive(false);
+        canvasCancelar.SetActive(false);
+        botonCancelar.SetActive(false);
+    }
+
+    public void cancelarRuta()
+    {
+        canvasCancelar.SetActive(true);
+    }
+
+    public void cancelarRutaNo()
+    {
+        canvasCancelar.SetActive(false);
+    }
+
+    public void cancelarRutaSi()
+    {
+        canvasCancelar.SetActive(false);
+        pararRuta();
+    }
+
+
 }

@@ -6,6 +6,7 @@ using UnityEngine;
 public class UnityAndroid : MonoBehaviour
 {
     public TextMeshProUGUI text;
+    public rutaBasica ruta;
     public string obtenerEdificioSeleccionado()
     {
         string nombre = null;
@@ -44,12 +45,22 @@ public class UnityAndroid : MonoBehaviour
         // obtener edificio seleccionado
         // obtener nodo mas cercano
         // si es null, android preguntara desde donde calcular la ruta
-        AndroidJavaClass unityPlayerClass = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
-        AndroidJavaObject unityPlayerActivity = unityPlayerClass.GetStatic<AndroidJavaObject>("currentActivity");
+        
+        //AndroidJavaClass unityPlayerClass = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
+        //AndroidJavaObject unityPlayerActivity = unityPlayerClass.GetStatic<AndroidJavaObject>("currentActivity");
+        
+        string numeroEdificio = obtenerEdificioSeleccionado();
+        string[] partes = numeroEdificio.Split("-");
+        numeroEdificio = partes[0];
+
+        string parametros = numeroEdificio;
+        GameObject destino = GameObject.Find("ED-" + numeroEdificio);
+        GameObject destino2 = destino.GetComponent<edificio>().entradas[0];
+        ruta.calcularRutaBasica(destino2);
+        
+        //unityPlayerActivity.CallStatic("informacionEdificioAndroid",parametros );
 
 
-        string parametros = "pruebaaaa";
-        unityPlayerActivity.CallStatic("informacionEdificioAndroid",parametros );
 
     }
 

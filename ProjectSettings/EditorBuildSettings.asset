@@ -14,7 +14,13 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/copia v0.5.unity
     guid: daa2d7690e4fc4940b0934a1b9910b5a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/copia v0.8.unity
     guid: be13556fe36dd8d45a11eb1109f20e53
+  - enabled: 0
+    path: Assets/Scenes/copia v0.9.1.unity
+    guid: 46ebf138d25040f458bb670692e3ee9d
+  - enabled: 1
+    path: Assets/Scenes/copia v0.9.2.unity
+    guid: dc692cbd43a1ab14baa83971598ed9cf
   m_configObjects: {}

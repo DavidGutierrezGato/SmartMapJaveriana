@@ -286,9 +286,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58ff1e6c392b82d4193b09bcbfadcb9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensor: {fileID: 888441702}
+  sensor: {fileID: 704890516}
   destino: {fileID: 270876314}
-  rutas: {fileID: 888441703}
+  rutas: {fileID: 704890510}
   linea: {fileID: 759660320}
 --- !u!4 &6223248
 Transform:
@@ -5904,6 +5904,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1344042923}
+  ruta: {fileID: 6223247}
 --- !u!4 &584730247
 Transform:
   m_ObjectHideFlags: 0
@@ -7414,10 +7415,10 @@ MonoBehaviour:
   velocidad: 5
   distanciaEntre: 0.1
   empezo: 0
-  linea: {fileID: 0}
-  canvasCancelar: {fileID: 0}
-  botonCancelar: {fileID: 0}
-  sensor: {fileID: 0}
+  linea: {fileID: 759660320}
+  canvasCancelar: {fileID: 2068833580}
+  botonCancelar: {fileID: 760879899}
+  sensor: {fileID: 704890516}
 --- !u!65 &704890511
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7489,7 +7490,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 704890509}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 231, y: 92.8, z: 426}
+  m_LocalPosition: {x: 100.8, y: 92.8, z: 452.6}
   m_LocalScale: {x: 1, y: 125.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7525,7 +7526,7 @@ MonoBehaviour:
   capa:
     serializedVersion: 2
     m_Bits: 64
-  masCercano: {fileID: 0}
+  masCercano: {fileID: 704890509}
 --- !u!1 &706150641
 GameObject:
   m_ObjectHideFlags: 0
