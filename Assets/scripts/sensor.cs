@@ -39,6 +39,10 @@ public class sensor : MonoBehaviour
         {
             masCercano = colliders[0].gameObject;
         }
+        if (colliders.Length == 0)
+        {
+            masCercano = null;
+        }
         yield return new WaitForSeconds(5);
     }
 

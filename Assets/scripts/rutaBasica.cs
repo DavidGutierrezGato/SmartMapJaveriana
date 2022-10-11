@@ -84,4 +84,38 @@ public class rutaBasica : MonoBehaviour
 
     }
 
+    public void calcularRutaBasica(GameObject ini,GameObject des)
+    {
+        destino = des;
+        GameObject inicio = ini;
+        List<GameObject> ruta = new List<GameObject>();
+        List<GameObject> visitados = new List<GameObject>();
+        ruta.Add(inicio);
+        visitados.Add(inicio);
+        List<GameObject> vecinosNodo = inicio.GetComponent<nodo>().vecinos;
+        float distanciaMinima = 100000000000f;
+        GameObject ganador = null;
+        foreach (GameObject veci in vecinosNodo)
+        {
+            if (Vector3.Distance(veci.transform.position, destino.transform.position) < distanciaMinima)
+            {
+                distanciaMinima = Vector3.Distance(veci.transform.position, destino.transform.position);
+                ganador = veci;
+            }
+        }
+        ruta.Add(ganador);
+
+        calcularRutaBasicaR(ruta, ganador, destino);
+
+        foreach (GameObject nodo in ruta)
+        {
+            Debug.LogError(nodo.name);
+        }
+
+        linea.GetComponent<nodo>().vecinos = ruta;
+        linea.GetComponent<nodo>().pintarRuta();
+        rutas.empezarRuta(ruta);
+
+    }
+
 }
