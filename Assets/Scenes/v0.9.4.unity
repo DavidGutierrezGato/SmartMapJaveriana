@@ -286,9 +286,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58ff1e6c392b82d4193b09bcbfadcb9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensor: {fileID: 704890516}
+  sensor: {fileID: 888441702}
   destino: {fileID: 270876314}
-  rutas: {fileID: 704890510}
+  rutas: {fileID: 888441703}
   linea: {fileID: 759660320}
 --- !u!4 &6223248
 Transform:
@@ -2603,6 +2603,7 @@ MonoBehaviour:
   - {fileID: 1654242797}
   - {fileID: 1351409549}
   - {fileID: 803455680}
+  - {fileID: 2141935845}
   lineRenderer: {fileID: 0}
   radio: 30
 --- !u!4 &234826719
@@ -8168,7 +8169,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &742456196
 Transform:
   m_ObjectHideFlags: 0
@@ -9035,7 +9036,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &809178164
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9063,7 +9064,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vecinos:
   - {fileID: 1176574867}
-  - {fileID: 973398047}
   lineRenderer: {fileID: 0}
   radio: 30
 --- !u!4 &809178166
@@ -10236,7 +10236,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &888441702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10358,7 +10358,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 888441701}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 79, y: 65.2, z: 289.5}
+  m_LocalPosition: {x: 154.5, y: 65.2, z: 414.9}
   m_LocalScale: {x: 1, y: 125.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11276,7 +11276,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &973398048
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11493,7 +11493,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vecinos:
   - {fileID: 21838901}
-  - {fileID: 1539630800}
   - {fileID: 1177709646}
   lineRenderer: {fileID: 0}
   radio: 30
@@ -11591,7 +11590,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1021358214
 Transform:
   m_ObjectHideFlags: 0
@@ -13225,7 +13224,6 @@ MonoBehaviour:
   vecinos:
   - {fileID: 1739473615}
   - {fileID: 914721736}
-  - {fileID: 809178163}
   lineRenderer: {fileID: 0}
   radio: 30
 --- !u!4 &1176574870
@@ -14383,7 +14381,6 @@ MonoBehaviour:
   vecinos:
   - {fileID: 1169091366}
   - {fileID: 1200413052}
-  - {fileID: 1021358213}
   lineRenderer: {fileID: 0}
   radio: 30
 --- !u!1 &1324498869
@@ -15069,7 +15066,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6223247}
         m_TargetAssemblyTypeName: rutaBasica, Assembly-CSharp
-        m_MethodName: calcularRutaBasica
+        m_MethodName: calcularRutaBasica2
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 21838901}
@@ -16765,7 +16762,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1539630801
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23263,6 +23260,7 @@ MonoBehaviour:
   vecinos:
   - {fileID: 869121709}
   - {fileID: 1591214641}
+  - {fileID: 2082885182}
   lineRenderer: {fileID: 0}
   radio: 30
 --- !u!4 &1659955830
@@ -26625,7 +26623,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &2047361381
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26950,7 +26948,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vecinos:
   - {fileID: 984689437}
-  - {fileID: 2047361380}
   - {fileID: 507565074}
   lineRenderer: {fileID: 0}
   radio: 30
@@ -27386,6 +27383,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vecinos:
   - {fileID: 869121709}
+  - {fileID: 1659955827}
   lineRenderer: {fileID: 0}
   radio: 30
 --- !u!1 &2084177852
@@ -28187,6 +28185,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vecinos:
   - {fileID: 803455680}
+  - {fileID: 234826716}
   lineRenderer: {fileID: 0}
   radio: 30
 --- !u!23 &10004870495474589
@@ -44036,7 +44035,6 @@ MonoBehaviour:
   capacidad: 0
   numero: 2
   entradas:
-  - {fileID: 2047361380}
   - {fileID: 984689437}
   techo: {fileID: 852735024}
 --- !u!65 &9184585569819890029

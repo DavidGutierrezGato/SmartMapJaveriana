@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class rutaBasica : MonoBehaviour
@@ -34,6 +36,12 @@ public class rutaBasica : MonoBehaviour
         GameObject ganador = null;
         foreach (GameObject veci in vecinosNodo)
         {
+           //if (ruta.Contains(veci) && vecinosNodo.Count == 1)
+            //{
+            //    ruta.Remove(inicio);
+            //    ganador = ruta[ruta.Count-1];
+            //}
+
             if(!ruta.Contains(veci))
             {
                 if (Vector3.Distance(veci.transform.position, destino.transform.position) < distanciaMinima)
@@ -82,6 +90,12 @@ public class rutaBasica : MonoBehaviour
         linea.GetComponent<nodo>().pintarRuta();
         rutas.empezarRuta(ruta);
 
+    }
+
+    public void calcularRutaBasica2(GameObject des)
+    {
+
+        
     }
 
     public void calcularRutaBasica(GameObject ini,GameObject des)

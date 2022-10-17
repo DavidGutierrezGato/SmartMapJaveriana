@@ -9,6 +9,7 @@ public class UnityAndroid : MonoBehaviour
     public TextMeshProUGUI text;
     public rutaBasica ruta;
     public sensor sensor;
+    public PlayerInput mejorRuta;
     public string obtenerEdificioSeleccionado()
     {
         string nombre = null;
@@ -115,7 +116,9 @@ public class UnityAndroid : MonoBehaviour
                 GameObject destino = GameObject.Find("ED-" + partes[4]);
                 GameObject destino2 = destino.GetComponent<edificio>().entradas[0];
 
-                ruta.calcularRutaBasica(inicio2, destino2);
+                //ruta.calcularRutaBasica(inicio2, destino2);
+                //--------------------- cambiar en vez de ruta, al player input
+                mejorRuta.btnFindPath(inicio2.transform, destino2.transform);
             }
 
             if (partes.Length == 4)
@@ -126,7 +129,8 @@ public class UnityAndroid : MonoBehaviour
                 GameObject destino = GameObject.Find("ED-" + partes[3]);
                 GameObject destino2 = destino.GetComponent<edificio>().entradas[0];
 
-                ruta.calcularRutaBasica(inicio, destino2);
+                //ruta.calcularRutaBasica(inicio, destino2);
+                mejorRuta.btnFindPath(inicio.transform, destino2.transform);
             }
 
 

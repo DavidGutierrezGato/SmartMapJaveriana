@@ -14,6 +14,7 @@ public class rutas : MonoBehaviour
     public bool empezo = false;
     public GameObject linea;
     public GameObject canvasCancelar;
+    public GameObject canvasFinRuta;
     public GameObject botonCancelar;
     public sensor sensor;
 
@@ -24,6 +25,7 @@ public class rutas : MonoBehaviour
         //indice++;
         canvasCancelar.SetActive(false);
         botonCancelar.SetActive(false);
+        canvasFinRuta.SetActive(false);
     }
 
     // Update is called once per frame
@@ -37,21 +39,17 @@ public class rutas : MonoBehaviour
             {
                 indice++;
             }
-            if (indice >= nodos.Count)
+            if (indice >= nodos.Count || sensor.masCercano.name == nodos[nodos.Count - 1].name)
             {
                 // mostrar pantalla de llegada
                 indice = 0;
                 empezo = false;
                 linea.SetActive(false);
+                pararRuta();
+                mostrarMensajeLlegada();
 
             }
-            if(sensor.masCercano.name == nodos[nodos.Count-1].name)
-            {
-                indice = 0;
-                empezo = false;
-                linea.SetActive(false);
-                pararRuta();
-            }
+           
         }
         
     }
@@ -92,5 +90,14 @@ public class rutas : MonoBehaviour
         pararRuta();
     }
 
+    public void mostrarMensajeLlegada()
+    {
+        canvasFinRuta.SetActive(true);
+    }
+
+    public void quitarMensajeLlegada()
+    {
+        canvasFinRuta.SetActive(false);
+    }
 
 }
