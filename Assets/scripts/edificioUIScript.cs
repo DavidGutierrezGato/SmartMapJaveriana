@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class edificioUIScript : MonoBehaviour
 {
@@ -38,6 +39,12 @@ public class edificioUIScript : MonoBehaviour
 
         transform.position = edificio.techo.transform.position;
         particulaSeleccion.transform.position = edificio.techo.transform.position;
+        
+        particulaSeleccion.transform.Translate(new Vector3(0, 0, 20));
+
+        
+
+
         edificio.fijarEdificio();
         //pokemon poke = pokeApi.darPokemon();
         string respuesta = ed.numero + "-" +ed.nombre;
