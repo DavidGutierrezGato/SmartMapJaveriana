@@ -62,6 +62,11 @@ public class rutas : MonoBehaviour
         empezo = true;
         linea.SetActive(true);
         botonCancelar.SetActive(true);
+        foreach(GameObject p in pnodos)
+        {
+            Debug.LogError(p.name);
+        }
+
 
     }
 

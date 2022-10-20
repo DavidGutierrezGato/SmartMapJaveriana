@@ -11,7 +11,7 @@ public class listarNodos : MonoBehaviour
         string texto = "";
         foreach (GameObject nodo in lista)
         {
-            texto += nodo.name + "*" + nodo.transform.position.x + "*" + nodo.transform.position.z;
+            texto += nodo.name + "*" + nodo.transform.position.x + "*" + nodo.transform.position.z+"*1";
             List<GameObject> vecinos = new List<GameObject>();
             vecinos = nodo.GetComponent<nodo>().vecinos;
             if(vecinos.Count > 0)
@@ -30,7 +30,7 @@ public class listarNodos : MonoBehaviour
                     
                 }
             }
-            texto += ".\n";
+            texto += "_\n";
         }
 
         string path = Application.dataPath + "/nodos.txt";
