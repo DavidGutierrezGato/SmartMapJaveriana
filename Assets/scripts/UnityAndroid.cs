@@ -63,7 +63,7 @@ public class UnityAndroid : MonoBehaviour
         {
             string[] partes2;
             partes2 = inicio.name.Split(" (");
-            string[] final = partes[1].Split(")");
+            string[] final = partes2[1].Split(")");
             // nodo (25)
             // nodo
             parametros = final[0] +numeroEdificio;
