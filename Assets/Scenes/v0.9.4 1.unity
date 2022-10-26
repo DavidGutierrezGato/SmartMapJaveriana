@@ -286,9 +286,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58ff1e6c392b82d4193b09bcbfadcb9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensor: {fileID: 888441702}
+  sensor: {fileID: 704890516}
   destino: {fileID: 270876314}
-  rutas: {fileID: 888441703}
+  rutas: {fileID: 704890510}
   linea: {fileID: 759660320}
 --- !u!4 &6223248
 Transform:
@@ -10612,7 +10612,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startNode: {fileID: 1607913263}
   endNode: {fileID: 706150642}
-  rutas: {fileID: 888441703}
+  rutas: {fileID: 704890510}
   linea: {fileID: 759660320}
 --- !u!114 &794914819
 MonoBehaviour:
