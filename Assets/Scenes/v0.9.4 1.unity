@@ -7176,6 +7176,8 @@ MonoBehaviour:
   ruta: {fileID: 6223247}
   sensor: {fileID: 704890516}
   mejorRuta: {fileID: 794914818}
+  cam: {fileID: 1651777257}
+  edificioUI: {fileID: 1108023412}
 --- !u!4 &584730247
 Transform:
   m_ObjectHideFlags: 0
@@ -17747,16 +17749,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 794914818}
-        m_TargetAssemblyTypeName: PlayerInput, Assembly-CSharp
-        m_MethodName: btnFindPath
-        m_Mode: 1
+      - m_Target: {fileID: 584730246}
+        m_TargetAssemblyTypeName: UnityAndroid, Assembly-CSharp
+        m_MethodName: RecibirEdificioAMostrar
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: 55
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1351156354

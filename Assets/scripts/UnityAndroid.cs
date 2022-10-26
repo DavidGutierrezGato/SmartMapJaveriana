@@ -10,6 +10,8 @@ public class UnityAndroid : MonoBehaviour
     public rutaBasica ruta;
     public sensor sensor;
     public PlayerInput mejorRuta;
+    public Camera cam;
+    public edificioUIScript edificioUI;
     public string obtenerEdificioSeleccionado()
     {
         string nombre = null;
@@ -66,11 +68,11 @@ public class UnityAndroid : MonoBehaviour
             string[] final = partes2[1].Split(")");
             // nodo (25)
             // nodo
-            parametros = final[0] +numeroEdificio;
+            parametros = final[0] + "-"+numeroEdificio;
         }
         else
         {
-            parametros = "null,"+numeroEdificio;
+            parametros = "null-"+numeroEdificio;
         }
 
         
@@ -141,5 +143,36 @@ public class UnityAndroid : MonoBehaviour
         }
         
     }
+
+
+    // RECIBO EL NUMERO DEL EDIFICIO 
+    // 55
+    // 3
+    public void RecibirEdificioAMostrar(string numEdi)
+    {
+        // obtener edificio
+        
+        GameObject[] partes = GameObject.FindGameObjectsWithTag("edificio");
+        edificio actual = null;
+        for (int i = 0; i < partes.Length; i++)
+        {
+            if(partes[i].name == "ED-"+ numEdi)
+            {
+                actual = partes[i].GetComponent<edificio>();
+                break;
+            }
+        }
+
+        // resetear camara
+        cam.GetComponent<movxd>().resetearPos();
+
+        // seleccionar edificio
+        cam.transform.LookAt(actual.transform);
+        edificioUI.setEdificio(actual);
+
+
+
+    }
+
 
 }
