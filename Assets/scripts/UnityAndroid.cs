@@ -51,8 +51,7 @@ public class UnityAndroid : MonoBehaviour
         // obtener nodo mas cercano
         // si es null, android preguntara desde donde calcular la ruta
         
-        AndroidJavaClass unityPlayerClass = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
-        AndroidJavaObject unityPlayerActivity = unityPlayerClass.GetStatic<AndroidJavaObject>("currentActivity");
+        
         
         string numeroEdificio = obtenerEdificioSeleccionado();
         string[] partes = numeroEdificio.Split("-");
@@ -75,12 +74,15 @@ public class UnityAndroid : MonoBehaviour
             parametros = "null-"+numeroEdificio;
         }
 
-        
+        print(parametros);
+        Debug.LogError(parametros);
 
         //GameObject destino = GameObject.Find("ED-" + numeroEdificio);
         //GameObject destino2 = destino.GetComponent<edificio>().entradas[0];
         //ruta.calcularRutaBasica(destino2);
-        
+        AndroidJavaClass unityPlayerClass = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
+        AndroidJavaObject unityPlayerActivity = unityPlayerClass.GetStatic<AndroidJavaObject>("currentActivity");
+
         unityPlayerActivity.CallStatic("calcularRutaAndroid",parametros );
 
 
