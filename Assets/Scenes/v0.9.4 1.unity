@@ -14839,6 +14839,7 @@ MonoBehaviour:
   texto: {fileID: 1344042923}
   panel: {fileID: 1654054711}
   particulaSeleccion: {fileID: 2731080211528638117}
+  rutas: {fileID: 704890510}
 --- !u!4 &1108023413
 Transform:
   m_ObjectHideFlags: 0

@@ -12,6 +12,7 @@ public class edificioUIScript : MonoBehaviour
     public TextMeshProUGUI texto;
     public GameObject panel;
     public GameObject particulaSeleccion;
+    public rutas rutas;
 
     private void Start()
     {
@@ -35,22 +36,26 @@ public class edificioUIScript : MonoBehaviour
     public void setEdificio(edificio ed)
     {
 
-        this.edificio = ed;
+        if(!rutas.empezo)
+        {
+            this.edificio = ed;
 
-        transform.position = edificio.techo.transform.position;
-        particulaSeleccion.transform.position = edificio.techo.transform.position;
+            transform.position = edificio.techo.transform.position;
+            particulaSeleccion.transform.position = edificio.techo.transform.position;
+
+            particulaSeleccion.transform.Translate(new Vector3(0, 0, 20));
+
+
+
+
+            edificio.fijarEdificio();
+            //pokemon poke = pokeApi.darPokemon();
+            string respuesta = ed.numero + "-" + ed.nombre;
+            texto.text = respuesta;
+            ui.SetActive(true);
+            particulaSeleccion.SetActive(true);
+        }
         
-        particulaSeleccion.transform.Translate(new Vector3(0, 0, 20));
-
-        
-
-
-        edificio.fijarEdificio();
-        //pokemon poke = pokeApi.darPokemon();
-        string respuesta = ed.numero + "-" +ed.nombre;
-        texto.text = respuesta;
-        ui.SetActive(true);
-        particulaSeleccion.SetActive(true);
     }
 
     public void hide()
