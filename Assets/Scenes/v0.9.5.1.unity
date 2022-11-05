@@ -7178,6 +7178,7 @@ MonoBehaviour:
   mejorRuta: {fileID: 794914818}
   cam: {fileID: 1651777257}
   edificioUI: {fileID: 1108023412}
+  geo: {fileID: 100138450}
 --- !u!4 &584730247
 Transform:
   m_ObjectHideFlags: 0
@@ -17756,9 +17757,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 794914818}
-        m_TargetAssemblyTypeName: PlayerInput, Assembly-CSharp
-        m_MethodName: btnFindPath
+      - m_Target: {fileID: 584730246}
+        m_TargetAssemblyTypeName: UnityAndroid, Assembly-CSharp
+        m_MethodName: enviarPosicionActual
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

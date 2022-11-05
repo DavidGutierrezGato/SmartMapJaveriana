@@ -13,6 +13,7 @@ public class actualizarGPS : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         coordenadas.text = " Long: " + geo.getLongitudX().ToString() + "\nLat: " + geo.getLatitudY().ToString();
         if(geo.getLongitudX() < 550 && geo.getLongitudX() > -270 &&
             geo.getLatitudY() < 700 && geo.getLatitudY() > -100)

@@ -12,6 +12,7 @@ public class UnityAndroid : MonoBehaviour
     public PlayerInput mejorRuta;
     public Camera cam;
     public edificioUIScript edificioUI;
+    public geolocalizacion geo;
 
     //modificado
     private string ultimoEdificio;
@@ -233,6 +234,19 @@ public class UnityAndroid : MonoBehaviour
 
 
     }
+
+
+    public void enviarPosicionActual()
+    {
+        string parametro = "";
+        parametro += geo.latitud.ToString() +","+geo.longitud;
+        AndroidJavaClass unityPlayerClass = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
+        AndroidJavaObject unityPlayerActivity = unityPlayerClass.GetStatic<AndroidJavaObject>("currentActivity");
+
+        unityPlayerActivity.CallStatic("recibirPosicionActual",parametro);
+
+    }
+
 
 
 }
