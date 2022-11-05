@@ -18,6 +18,11 @@ public class rutas : MonoBehaviour
     public GameObject botonCancelar;
     public sensor sensor;
 
+    //modificado
+    private string nodoCercano;
+    public PlayerInput input;
+    public UnityAndroid controladorUnity;
+
 
     void Start()
     {
@@ -31,15 +36,27 @@ public class rutas : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //modificado
+        nodoCercano = sensor.masCercano.name;
+
         if(empezo)
         {
+            // Modificado
+            if(nodoCercano != nodos[0].name)
+            {
+                // cambiar a calcular ruta unity (unityAndroid.cs)
+                //input.btnFindPath(sensor.masCercano.transform, nodos[nodos.Count - 1].transform);
+                controladorUnity.CalcularRutaUnityActualizado();
+            }
+
             //this.transform.position = Vector3.MoveTowards(this.transform.position, nodos[indice].transform.position, velocidad * Time.deltaTime);
 
-            if (Vector3.Distance(this.transform.position, nodos[indice].transform.position) < distanciaEntre)
+            /*if (Vector3.Distance(this.transform.position, nodos[indice].transform.position) < distanciaEntre)
             {
                 indice++;
             }
-            if (indice >= nodos.Count || sensor.masCercano.name == nodos[nodos.Count - 1].name)
+            */
+            if (sensor.masCercano.name == nodos[nodos.Count - 1].name)
             {
                 // mostrar pantalla de llegada
                 indice = 0;
@@ -54,6 +71,8 @@ public class rutas : MonoBehaviour
         
     }
 
+    // funcion original
+    /*
     public void empezarRuta(List<GameObject> pnodos)
     {
         this.nodos = pnodos;
@@ -63,6 +82,24 @@ public class rutas : MonoBehaviour
         linea.SetActive(true);
         botonCancelar.SetActive(true);
         foreach(GameObject p in pnodos)
+        {
+            Debug.LogError(p.name);
+        }
+
+
+    }
+    */
+
+    // funcion modificada
+    public void empezarRuta(List<GameObject> pnodos)
+    {
+        this.nodos = pnodos;
+        //this.transform.position = nodos[indice].transform.position;
+        //indice++;
+        empezo = true;
+        linea.SetActive(true);
+        botonCancelar.SetActive(true);
+        foreach (GameObject p in pnodos)
         {
             Debug.LogError(p.name);
         }

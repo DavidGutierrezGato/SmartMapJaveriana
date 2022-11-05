@@ -12,6 +12,15 @@ public class UnityAndroid : MonoBehaviour
     public PlayerInput mejorRuta;
     public Camera cam;
     public edificioUIScript edificioUI;
+
+    //modificado
+    private string ultimoEdificio;
+
+    public void Start()
+    {
+        ultimoEdificio = null;
+    }
+
     public string obtenerEdificioSeleccionado()
     {
         string nombre = null;
@@ -54,6 +63,10 @@ public class UnityAndroid : MonoBehaviour
         
         
         string numeroEdificio = obtenerEdificioSeleccionado();
+        if(numeroEdificio != ultimoEdificio )
+        {
+            ultimoEdificio = numeroEdificio;
+        }
         string[] partes = numeroEdificio.Split("-");
         numeroEdificio = partes[0];
         string parametros = "";
@@ -89,10 +102,55 @@ public class UnityAndroid : MonoBehaviour
 
     }
 
+    public void CalcularRutaUnityActualizado()
+    {
+        // obtener edificio seleccionado
+        // obtener nodo mas cercano
+        // si es null, android preguntara desde donde calcular la ruta
 
 
 
-     // Recibir Ruta
+        string numeroEdificio = ultimoEdificio;
+        
+        string[] partes = numeroEdificio.Split("-");
+        numeroEdificio = partes[0];
+        string parametros = "";
+
+
+        GameObject inicio = sensor.masCercano;
+        if (inicio != null)
+        {
+            string[] partes2;
+            partes2 = inicio.name.Split(" (");
+            string[] final = partes2[1].Split(")");
+            // nodo (25)
+            // nodo
+            parametros = final[0] + "-" + numeroEdificio;
+        }
+        else
+        {
+            parametros = "null-" + numeroEdificio;
+        }
+
+        print(parametros);
+        Debug.LogError(parametros);
+
+        //GameObject destino = GameObject.Find("ED-" + numeroEdificio);
+        //GameObject destino2 = destino.GetComponent<edificio>().entradas[0];
+        //ruta.calcularRutaBasica(destino2);
+        AndroidJavaClass unityPlayerClass = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
+        AndroidJavaObject unityPlayerActivity = unityPlayerClass.GetStatic<AndroidJavaObject>("currentActivity");
+
+        unityPlayerActivity.CallStatic("calcularRutaAndroid", parametros);
+
+
+
+    }
+
+
+
+
+    // Recibir Ruta
     // recibir string y trazar la ruta dependiendo del tipo de ruta
     /*
      * (Tipo,nodoInicio,Lista ruta) ó (Tipo,NombreEd,NombreEd) ? caso especial

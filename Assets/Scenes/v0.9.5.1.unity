@@ -8934,13 +8934,14 @@ MonoBehaviour:
   - {fileID: 1522003427}
   - {fileID: 214609801}
   velocidad: 5
-  distanciaEntre: 0.1
+  distanciaEntre: 0.2
   empezo: 0
   linea: {fileID: 759660320}
   canvasCancelar: {fileID: 2068833580}
   canvasFinRuta: {fileID: 972816968}
   botonCancelar: {fileID: 760879899}
   sensor: {fileID: 704890516}
+  input: {fileID: 794914818}
 --- !u!65 &704890511
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10611,7 +10612,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startNode: {fileID: 1084007124}
-  endNode: {fileID: 1189821542}
+  endNode: {fileID: 1060437962}
   rutas: {fileID: 704890510}
   linea: {fileID: 759660320}
 --- !u!114 &794914819
@@ -12143,6 +12144,7 @@ MonoBehaviour:
   canvasFinRuta: {fileID: 972816968}
   botonCancelar: {fileID: 760879899}
   sensor: {fileID: 888441702}
+  input: {fileID: 794914818}
 --- !u!65 &888441704
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17751,10 +17753,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 584730246}
-        m_TargetAssemblyTypeName: UnityAndroid, Assembly-CSharp
-        m_MethodName: RecibirEdificioAMostrar
-        m_Mode: 5
+      - m_Target: {fileID: 794914818}
+        m_TargetAssemblyTypeName: PlayerInput, Assembly-CSharp
+        m_MethodName: btnFindPath
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

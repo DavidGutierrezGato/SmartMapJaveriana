@@ -8,6 +8,7 @@ public class actualizarGPS : MonoBehaviour
     public Text coordenadas;
     public geolocalizacion geo;
     public Transform persona;
+    public Transform cuerpo;
 
     // Update is called once per frame
     void Update()
@@ -18,11 +19,15 @@ public class actualizarGPS : MonoBehaviour
         {
             persona.gameObject.SetActive(true);
             persona.position = new Vector3((float)geo.getLongitudX(), persona.position.y, (float)geo.getLatitudY());
+
+            cuerpo.gameObject.SetActive(true);
+            cuerpo.position = new Vector3((float)geo.getLongitudX(), persona.position.y, (float)geo.getLatitudY());
         }
         else
         {
             // Debug.Log("no esta en la universidad");
             persona.gameObject.SetActive(false);
+            cuerpo.gameObject.SetActive(false);
         }
         
     }
