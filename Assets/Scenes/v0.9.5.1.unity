@@ -207,7 +207,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 888441703}
+      - m_Target: {fileID: 704890510}
         m_TargetAssemblyTypeName: rutas, Assembly-CSharp
         m_MethodName: cancelarRutaSi
         m_Mode: 1
@@ -9624,7 +9624,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 742456195}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 23.76, y: 33.03, z: 119.5}
+  m_LocalPosition: {x: 26.63, y: 33.03, z: 120.09}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9928,7 +9928,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 888441703}
+      - m_Target: {fileID: 704890510}
         m_TargetAssemblyTypeName: rutas, Assembly-CSharp
         m_MethodName: cancelarRuta
         m_Mode: 1
@@ -13725,7 +13725,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1021358213}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 28.656, y: 33.012, z: 139.057}
+  m_LocalPosition: {x: 28.46, y: 33.012, z: 138.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16916,7 +16916,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1304852206}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 30.96, y: 33.02, z: 150.83}
+  m_LocalPosition: {x: 31.26, y: 33.02, z: 148.65}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16952,6 +16952,7 @@ MonoBehaviour:
   - {fileID: 1169091366}
   - {fileID: 1200413052}
   - {fileID: 1304852206}
+  - {fileID: 1021358213}
   lineRenderer: {fileID: 0}
   radio: 30
 --- !u!114 &1304852210
@@ -28159,7 +28160,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 888441703}
+      - m_Target: {fileID: 704890510}
         m_TargetAssemblyTypeName: rutas, Assembly-CSharp
         m_MethodName: cancelarRutaNo
         m_Mode: 1
