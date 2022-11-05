@@ -21,7 +21,7 @@ public class actualizarGPS : MonoBehaviour
             persona.position = new Vector3((float)geo.getLongitudX(), persona.position.y, (float)geo.getLatitudY());
 
             cuerpo.gameObject.SetActive(true);
-            cuerpo.position = new Vector3((float)geo.getLongitudX(), persona.position.y, (float)geo.getLatitudY());
+            cuerpo.position = new Vector3((float)geo.getLongitudX(), cuerpo.position.y, (float)geo.getLatitudY());
         }
         else
         {
