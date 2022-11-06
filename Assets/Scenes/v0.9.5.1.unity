@@ -10964,7 +10964,7 @@ GameObject:
   - component: {fileID: 823309949}
   - component: {fileID: 823309948}
   m_Layer: 0
-  m_Name: ed 23
+  m_Name: ED-23
   m_TagString: edificio
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10977,13 +10977,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 823309946}
-  m_LocalRotation: {x: 0.037354644, y: 0.011768026, z: 0.11546586, w: 0.99253905}
-  m_LocalPosition: {x: 297.61, y: -144.33, z: -28.93}
+  m_LocalRotation: {x: -0.6754174, y: 0.089967944, z: 0.073325425, w: 0.7282448}
+  m_LocalPosition: {x: 73.72692, y: 38.43952, z: 61.876923}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1159717815983291803}
-  m_RootOrder: 0
+  m_Father: {fileID: 4020803168419993035}
+  m_RootOrder: 60
   m_LocalEulerAnglesHint: {x: 4.096, y: 1.838, z: 13.337}
 --- !u!114 &823309948
 MonoBehaviour:
@@ -13500,7 +13500,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 997063053}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 52.5, y: 31.68, z: 284.2}
+  m_LocalPosition: {x: 54.1, y: 31.68, z: 281.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -33514,10 +33514,9 @@ Transform:
   m_LocalPosition: {x: -223.88306, y: 67.369484, z: -82.453094}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 823309947}
+  m_Children: []
   m_Father: {fileID: 4020803168419993035}
-  m_RootOrder: 60
+  m_RootOrder: 61
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1182004050465016060
 GameObject:
@@ -37432,6 +37431,7 @@ Transform:
   - {fileID: 386412097}
   - {fileID: 28445681}
   - {fileID: 163867258}
+  - {fileID: 823309947}
   - {fileID: 1159717815983291803}
   m_Father: {fileID: 0}
   m_RootOrder: 28
@@ -38275,7 +38275,7 @@ GameObject:
   - component: {fileID: 7147149638435425396}
   - component: {fileID: 8618957732165174517}
   m_Layer: 0
-  m_Name: ED-23
+  m_Name: recursos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38924,7 +38924,8 @@ MonoBehaviour:
   nombre: Auditorio Alejandro Novoa, S.J.
   capacidad: 0
   numero: 34
-  entradas: []
+  entradas:
+  - {fileID: 997063053}
   techo: {fileID: 908963728}
 --- !u!65 &5005312031290092244
 BoxCollider:
@@ -40366,7 +40367,8 @@ MonoBehaviour:
   nombre: "Jos\xE9 Gabriel Maldonado S.J."
   capacidad: 0
   numero: 11
-  entradas: []
+  entradas:
+  - {fileID: 498080356}
   techo: {fileID: 1995742778}
 --- !u!65 &5760328200784419780
 BoxCollider:
@@ -43774,7 +43776,8 @@ MonoBehaviour:
   nombre: "Capilla Nuestra Se\xF1ora del Camino"
   capacidad: 0
   numero: 17
-  entradas: []
+  entradas:
+  - {fileID: 217185757}
   techo: {fileID: 627690785}
 --- !u!65 &7320651162510787212
 BoxCollider:
@@ -44655,7 +44658,8 @@ MonoBehaviour:
   nombre: "N\xE9stor Santacoloma"
   capacidad: 0
   numero: 30
-  entradas: []
+  entradas:
+  - {fileID: 307591513}
   techo: {fileID: 787630797}
 --- !u!65 &7798340209382010126
 BoxCollider:
@@ -46359,7 +46363,9 @@ MonoBehaviour:
   nombre: Talleres de Arquitectura
   capacidad: 0
   numero: 18
-  entradas: []
+  entradas:
+  - {fileID: 217185757}
+  - {fileID: 1406413278}
   techo: {fileID: 826195642}
 --- !u!65 &8613337278563164232
 BoxCollider:
@@ -47645,7 +47651,8 @@ MonoBehaviour:
   nombre: "Hernando Arellano \xC1ngel"
   capacidad: 0
   numero: 116
-  entradas: []
+  entradas:
+  - {fileID: 1280924020}
   techo: {fileID: 1259004500}
 --- !u!65 &9059669250405882518
 BoxCollider:
@@ -47846,7 +47853,8 @@ MonoBehaviour:
   nombre: "Intituto de Gen\xE9tica Humana"
   capacidad: 0
   numero: 32
-  entradas: []
+  entradas:
+  - {fileID: 1893652157}
   techo: {fileID: 1603647166}
 --- !u!65 &9155500680568439471
 BoxCollider:
