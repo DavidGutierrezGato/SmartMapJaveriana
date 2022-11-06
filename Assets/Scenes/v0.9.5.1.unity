@@ -42976,7 +42976,8 @@ MonoBehaviour:
   nombre: Lorenzo Uribe S.J.
   capacidad: 0
   numero: 7
-  entradas: []
+  entradas:
+  - {fileID: 1328733555}
   techo: {fileID: 89767801}
 --- !u!65 &6958571899521929998
 BoxCollider:
@@ -44944,7 +44945,9 @@ MonoBehaviour:
   nombre: Gerardo Arango Puerta S.J.
   capacidad: 0
   numero: 4
-  entradas: []
+  entradas:
+  - {fileID: 1177709646}
+  - {fileID: 1001924556}
   techo: {fileID: 819858434}
 --- !u!65 &7981826543534137100
 BoxCollider:
@@ -47123,7 +47126,8 @@ MonoBehaviour:
   nombre: Casa Navarro
   capacidad: 0
   numero: 1
-  entradas: []
+  entradas:
+  - {fileID: 2141935845}
   techo: {fileID: 307809544}
 --- !u!65 &8900684470695347677
 BoxCollider:
