@@ -242,11 +242,12 @@ public class UnityAndroid : MonoBehaviour
     public void enviarPosicionActual()
     {
         string parametro = "";
-        parametro += geo.latitud.ToString() +","+geo.longitud;
+        parametro += geo.latitud.ToString() +","+geo.longitud.ToString();
         AndroidJavaClass unityPlayerClass = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
         AndroidJavaObject unityPlayerActivity = unityPlayerClass.GetStatic<AndroidJavaObject>("currentActivity");
 
         unityPlayerActivity.CallStatic("recibirPosicionActual",parametro);
+        Debug.LogError(parametro);
 
     }
 
