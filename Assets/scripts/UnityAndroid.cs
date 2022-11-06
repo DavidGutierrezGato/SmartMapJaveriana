@@ -236,6 +236,9 @@ public class UnityAndroid : MonoBehaviour
     }
 
 
+    // le paso un string con la latitud y longitud de android
+    // Toca manejar muchos decimales
+    // -7.654654321,45.321654654
     public void enviarPosicionActual()
     {
         string parametro = "";
@@ -244,6 +247,22 @@ public class UnityAndroid : MonoBehaviour
         AndroidJavaObject unityPlayerActivity = unityPlayerClass.GetStatic<AndroidJavaObject>("currentActivity");
 
         unityPlayerActivity.CallStatic("recibirPosicionActual",parametro);
+
+    }
+
+    // le paso un string con el nodo anterior y el nodo actual
+    // null,nodo (51)
+    // null,null --> no deberia mandar nada
+    // nodo (11),nodo (54)
+    // nodo (11),null 
+    public void actualizarPosicion(string parametros)
+    {
+        
+        
+        AndroidJavaClass unityPlayerClass = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
+        AndroidJavaObject unityPlayerActivity = unityPlayerClass.GetStatic<AndroidJavaObject>("currentActivity");
+
+        unityPlayerActivity.CallStatic("actualizarPosicionAndroid", parametros);
 
     }
 
