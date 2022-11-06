@@ -7104,8 +7104,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17640c08cd0459d4cbb047e2f16b0f0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensor: {fileID: 0}
-  UnityAndroid: {fileID: 0}
+  sensor: {fileID: 704890516}
+  UnityAndroid: {fileID: 584730246}
 --- !u!1 &581603947
 GameObject:
   m_ObjectHideFlags: 0
@@ -10820,7 +10820,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &809178164
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13378,7 +13378,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &973398048
 BoxCollider:
   m_ObjectHideFlags: 0
