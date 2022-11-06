@@ -24,9 +24,8 @@ public class HistoricoPos : MonoBehaviour
         {
             nodoAnterior = nodoActual;
             nodoActual = sensor.masCercano.name;
-
-
-
+            string param = nodoAnterior + "," + nodoActual;
+            UnityAndroid.actualizarPosicion(param);
         }
         
     }

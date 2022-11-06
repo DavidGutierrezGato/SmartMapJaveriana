@@ -10848,6 +10848,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vecinos:
   - {fileID: 1176574867}
+  - {fileID: 973398047}
   lineRenderer: {fileID: 0}
   radio: 30
 --- !u!4 &809178166
@@ -15679,6 +15680,7 @@ MonoBehaviour:
   vecinos:
   - {fileID: 1739473615}
   - {fileID: 914721736}
+  - {fileID: 809178163}
   lineRenderer: {fileID: 0}
   radio: 30
 --- !u!4 &1176574870
