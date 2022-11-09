@@ -9061,7 +9061,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 704890509}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 100.8, y: 95.67, z: 452.6}
+  m_LocalPosition: {x: 105.5, y: 95.67, z: 52.2}
   m_LocalScale: {x: 1, y: 125.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14893,6 +14893,7 @@ MonoBehaviour:
   panel: {fileID: 1654054711}
   particulaSeleccion: {fileID: 2731080211528638117}
   rutas: {fileID: 704890510}
+  desface: 0
 --- !u!4 &1108023413
 Transform:
   m_ObjectHideFlags: 0
@@ -19146,7 +19147,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1478396327
 RectTransform:
   m_ObjectHideFlags: 0
@@ -36661,7 +36662,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 402657262297304715}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 48.28273, y: 47.66369, z: 144.34813}
+  m_LocalPosition: {x: 48.3, y: 47.7, z: 143.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

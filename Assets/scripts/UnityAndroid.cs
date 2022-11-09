@@ -267,6 +267,12 @@ public class UnityAndroid : MonoBehaviour
 
     }
 
+    public void centrarCamara()
+    {
+        cam.GetComponent<movxd>().resetearPos();
+
+    }
+
 
 
 }

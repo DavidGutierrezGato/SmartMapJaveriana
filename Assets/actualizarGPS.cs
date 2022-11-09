@@ -19,7 +19,7 @@ public class actualizarGPS : MonoBehaviour
             geo.getLatitudY() < 700 && geo.getLatitudY() > -100)
         {
             persona.gameObject.SetActive(true);
-            persona.position = new Vector3((float)geo.getLongitudX(), persona.position.y, (float)geo.getLatitudY());
+            persona.position = new Vector3((float)geo.getLongitudX()+10, persona.position.y, (float)geo.getLatitudY()+5);
 
             cuerpo.gameObject.SetActive(true);
             cuerpo.position = new Vector3((float)geo.getLongitudX(), cuerpo.position.y, (float)geo.getLatitudY());

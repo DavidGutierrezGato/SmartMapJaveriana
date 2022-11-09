@@ -13,6 +13,7 @@ public class edificioUIScript : MonoBehaviour
     public GameObject panel;
     public GameObject particulaSeleccion;
     public rutas rutas;
+    public float desface = 0;
 
     private void Start()
     {
@@ -21,6 +22,16 @@ public class edificioUIScript : MonoBehaviour
 
     public void Update()
     {
+        /*if(Vector3.Distance(Camera.main.transform.position,transform.position) < 20)
+        {
+            this.gameObject.SetActive(false);
+        }
+        else
+        {
+            this.gameObject.SetActive(true);
+        }
+        */
+
         panel.transform.LookAt(Camera.main.transform.position) ;
         panel.transform.eulerAngles = new Vector3(
          panel.transform.eulerAngles.x,
@@ -40,7 +51,7 @@ public class edificioUIScript : MonoBehaviour
         {
             this.edificio = ed;
 
-            transform.position = edificio.techo.transform.position;
+            transform.position = edificio.techo.transform.position + new Vector3(0,10, -50);
             particulaSeleccion.transform.position = edificio.techo.transform.position;
 
             particulaSeleccion.transform.Translate(new Vector3(0, 0, 20));
