@@ -12,6 +12,11 @@ public class movxd : MonoBehaviour
     public float maxZ = 20f;
 
     public GameObject originalPos;
+
+    public void Start()
+    {
+        this.resetearPos();
+    }
     void Update()
     {
         float xAxisValue = joystick.Horizontal * Speed ;
