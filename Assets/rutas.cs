@@ -46,7 +46,7 @@ public class rutas : MonoBehaviour
             {
                 // cambiar a calcular ruta unity (unityAndroid.cs)
                 //input.btnFindPath(sensor.masCercano.transform, nodos[nodos.Count - 1].transform);
-                controladorUnity.CalcularRutaUnityActualizado();
+                //controladorUnity.CalcularRutaUnityActualizado();
             }
 
             //this.transform.position = Vector3.MoveTowards(this.transform.position, nodos[indice].transform.position, velocidad * Time.deltaTime);

@@ -12,6 +12,8 @@ public class movxd : MonoBehaviour
     public float maxZ = 20f;
 
     public GameObject originalPos;
+    public GameObject posPersona;
+    public GameObject Persona;
 
     public void Start()
     {
@@ -60,6 +62,16 @@ public class movxd : MonoBehaviour
 
     public void resetearPos()
     {
-        transform.SetPositionAndRotation(originalPos.transform.position, originalPos.transform.rotation);
+        if(posPersona.GetComponent<actualizarGPS>().estaActivo)
+        {
+            Vector3 nuevoPos = new Vector3(originalPos.transform.position.x, originalPos.transform.position.y,Persona.transform.position.z);
+            transform.SetPositionAndRotation(nuevoPos, originalPos.transform.rotation);
+        }
+        else
+        {
+            transform.SetPositionAndRotation(originalPos.transform.position, originalPos.transform.rotation);
+        }
+
+        
     }
 }

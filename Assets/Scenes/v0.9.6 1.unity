@@ -286,9 +286,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58ff1e6c392b82d4193b09bcbfadcb9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensor: {fileID: 704890516}
+  sensor: {fileID: 888441702}
   destino: {fileID: 270876314}
-  rutas: {fileID: 704890510}
+  rutas: {fileID: 888441703}
   linea: {fileID: 759660320}
 --- !u!4 &6223248
 Transform:
@@ -1594,7 +1594,6 @@ MonoBehaviour:
   geo: {fileID: 100138450}
   persona: {fileID: 704890514}
   cuerpo: {fileID: 8890190637716789663}
-  estaActivo: 0
 --- !u!1 &110517832
 GameObject:
   m_ObjectHideFlags: 0
@@ -7221,7 +7220,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 1344042923}
   ruta: {fileID: 6223247}
-  sensor: {fileID: 704890516}
+  sensor: {fileID: 888441702}
   mejorRuta: {fileID: 794914818}
   cam: {fileID: 1651777257}
   edificioUI: {fileID: 1108023412}
@@ -8955,7 +8954,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &704890510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10660,9 +10659,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d45cc9d395ae25b439d6dbcef86bacad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startNode: {fileID: 1084007124}
-  endNode: {fileID: 1060437962}
-  rutas: {fileID: 704890510}
+  startNode: {fileID: 1607913263}
+  endNode: {fileID: 229261037}
+  rutas: {fileID: 888441703}
   linea: {fileID: 759660320}
 --- !u!114 &794914819
 MonoBehaviour:
@@ -12143,7 +12142,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &888441702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12267,7 +12266,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 888441701}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 154.5, y: 65.2, z: 414.9}
+  m_LocalPosition: {x: 56.1, y: 65.2, z: 273.9}
   m_LocalScale: {x: 1, y: 125.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14893,7 +14892,7 @@ MonoBehaviour:
   texto: {fileID: 1344042923}
   panel: {fileID: 1654054711}
   particulaSeleccion: {fileID: 2731080211528638117}
-  rutas: {fileID: 704890510}
+  rutas: {fileID: 888441703}
   desface: 0
 --- !u!4 &1108023413
 Transform:
@@ -17741,7 +17740,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1351156352
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17807,9 +17806,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 584730246}
-        m_TargetAssemblyTypeName: UnityAndroid, Assembly-CSharp
-        m_MethodName: enviarPosicionActual
+      - m_Target: {fileID: 794914818}
+        m_TargetAssemblyTypeName: PlayerInput, Assembly-CSharp
+        m_MethodName: btnFindPath
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -26253,8 +26252,6 @@ MonoBehaviour:
   minZ: -150
   maxZ: 700
   originalPos: {fileID: 1230786996}
-  posPersona: {fileID: 100138449}
-  Persona: {fileID: 704890509}
 --- !u!20 &1651777257
 Camera:
   m_ObjectHideFlags: 0

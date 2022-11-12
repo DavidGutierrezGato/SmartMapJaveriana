@@ -95,7 +95,8 @@ public class PlayerInput : MonoBehaviour {
     /// Button for find path.
     /// </summary>
     public void btnFindPath()
-    {   
+    {
+        double startTime = Time.realtimeSinceStartup;
         // Only find if there are start and end node.
         if (startNode != null && endNode != null)
         {
@@ -114,6 +115,10 @@ public class PlayerInput : MonoBehaviour {
             linea.GetComponent<nodo>().vecinos = vecinos;
             linea.GetComponent<nodo>().pintarRuta();
             rutas.empezarRuta(vecinos);
+
+            double endTime = (Time.realtimeSinceStartup - startTime);
+            print("Compute time: " + endTime);
+            Debug.LogError("Compute time: " + endTime);
 
         }
     }
