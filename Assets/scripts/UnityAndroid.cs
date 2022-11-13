@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class UnityAndroid : MonoBehaviour
@@ -178,6 +179,7 @@ public class UnityAndroid : MonoBehaviour
 
                 GameObject destino = GameObject.Find("ED-" + partes[4]);
                 GameObject destino2 = destino.GetComponent<edificio>().entradas[0];
+                //GameObject destino2 = darEntradaMasCercana(destino);
 
                 //ruta.calcularRutaBasica(inicio2, destino2);
                 //--------------------- cambiar en vez de ruta, al player input
@@ -190,8 +192,8 @@ public class UnityAndroid : MonoBehaviour
                 //GameObject inicio2 = inicio.GetComponent<edificio>().entradas[0];
 
                 GameObject destino = GameObject.Find("ED-" + partes[3]);
-                GameObject destino2 = destino.GetComponent<edificio>().entradas[0];
-
+                //GameObject destino2 = destino.GetComponent<edificio>().entradas[0];
+                GameObject destino2 = darEntradaMasCercana(inicio,destino);
                 //ruta.calcularRutaBasica(inicio, destino2);
                 mejorRuta.btnFindPath(inicio.transform, destino2.transform);
             }
@@ -200,8 +202,35 @@ public class UnityAndroid : MonoBehaviour
         }
         else
         {
+            //“Completo-5,14,28,64,10,3”
+            string[] ruta1 = respuesta.Split("-");
+            string[] nodos = ruta1[1].Split(",");
+            List<GameObject> rutaFinal = new List<GameObject>();
+            foreach(string nodo in nodos)
+            {
+                GameObject actual = GameObject.Find("nodo (" + nodo + ")");
+                rutaFinal.Add(actual);
+            }
+
+            mejorRuta.btnFindPathMejorado(rutaFinal);
 
         }
+
+    }
+
+    private GameObject darEntradaMasCercana(GameObject inicio, GameObject destino)
+    {
+        float masCercano = 1000000;
+        GameObject respuesta = null;
+        foreach(GameObject entrada in destino.GetComponent<edificio>().entradas)
+        {
+           if(Vector3.Distance(inicio.transform.position,entrada.transform.position) < masCercano)
+            {
+                masCercano = Vector3.Distance(inicio.transform.position, entrada.transform.position);
+                respuesta = entrada;
+            }
+        }
+        return respuesta;
         
     }
 

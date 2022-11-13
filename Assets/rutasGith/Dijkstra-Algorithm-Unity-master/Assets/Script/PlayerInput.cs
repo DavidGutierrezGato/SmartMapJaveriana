@@ -123,6 +123,17 @@ public class PlayerInput : MonoBehaviour {
         }
     }
 
+    public void btnFindPathMejorado(List<GameObject> rutaMejorada)
+    {
+       
+
+            linea.GetComponent<nodo>().vecinos = rutaMejorada;
+            linea.GetComponent<nodo>().pintarRuta();
+            rutas.empezarRuta(rutaMejorada);
+
+        
+    }
+
     public void btnFindPath(Transform inicio, Transform destino)
     {
         startNode = inicio;
