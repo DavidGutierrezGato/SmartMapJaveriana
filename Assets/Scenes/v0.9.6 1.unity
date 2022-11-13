@@ -34736,7 +34736,7 @@ GameObject:
   - component: {fileID: 6549065257513753915}
   m_Layer: 0
   m_Name: La pescera
-  m_TagString: edificio
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

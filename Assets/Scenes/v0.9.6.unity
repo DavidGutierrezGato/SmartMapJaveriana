@@ -34734,10 +34734,9 @@ GameObject:
   - component: {fileID: 5291752045564509613}
   - component: {fileID: 6549065257513753914}
   - component: {fileID: 6549065257513753916}
-  - component: {fileID: 6549065257513753915}
   m_Layer: 0
   m_Name: La pescera
-  m_TagString: edificio
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47133,25 +47132,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &6549065257513753915
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1182004050465016060}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06b77bee81c41364580fe28fda147657, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nombre: La pescera
-  capacidad: 0
-  numero: 0
-  entradas:
-  - {fileID: 870075408}
-  - {fileID: 691920306}
-  techo: {fileID: 259225114}
 --- !u!65 &6549065257513753916
 BoxCollider:
   m_ObjectHideFlags: 0
