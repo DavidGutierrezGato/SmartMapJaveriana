@@ -114,7 +114,7 @@ public class PlayerInput : MonoBehaviour {
 
             linea.GetComponent<nodo>().vecinos = vecinos;
             linea.GetComponent<nodo>().pintarRuta();
-            rutas.empezarRuta(vecinos);
+            rutas.empezarRuta(vecinos,true);
 
             double endTime = (Time.realtimeSinceStartup - startTime);
             print("Compute time: " + endTime);
@@ -129,7 +129,7 @@ public class PlayerInput : MonoBehaviour {
 
             linea.GetComponent<nodo>().vecinos = rutaMejorada;
             linea.GetComponent<nodo>().pintarRuta();
-            rutas.empezarRuta(rutaMejorada);
+            rutas.empezarRuta(rutaMejorada,false);
 
         
     }
@@ -155,7 +155,7 @@ public class PlayerInput : MonoBehaviour {
 
             linea.GetComponent<nodo>().vecinos = vecinos;
             linea.GetComponent<nodo>().pintarRuta();
-            rutas.empezarRuta(vecinos);
+            rutas.empezarRuta(vecinos,true);
 
         }
     }

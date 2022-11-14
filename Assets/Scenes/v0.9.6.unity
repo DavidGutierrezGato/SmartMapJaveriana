@@ -40618,7 +40618,7 @@ GameObject:
   - component: {fileID: 4851510497776394138}
   - component: {fileID: 4851510497776394137}
   m_Layer: 0
-  m_Name: ED-53/54
+  m_Name: ED-53
   m_TagString: edificio
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

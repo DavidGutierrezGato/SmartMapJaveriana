@@ -88,7 +88,7 @@ public class rutaBasica : MonoBehaviour
 
         linea.GetComponent<nodo>().vecinos = ruta;
         linea.GetComponent<nodo>().pintarRuta();
-        rutas.empezarRuta(ruta);
+        rutas.empezarRuta(ruta,true);
 
     }
 
@@ -128,7 +128,7 @@ public class rutaBasica : MonoBehaviour
 
         linea.GetComponent<nodo>().vecinos = ruta;
         linea.GetComponent<nodo>().pintarRuta();
-        rutas.empezarRuta(ruta);
+        rutas.empezarRuta(ruta, true);
 
     }
 

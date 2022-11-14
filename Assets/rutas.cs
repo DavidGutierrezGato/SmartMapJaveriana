@@ -91,13 +91,22 @@ public class rutas : MonoBehaviour
     */
 
     // funcion modificada
-    public void empezarRuta(List<GameObject> pnodos)
+    public void empezarRuta(List<GameObject> pnodos, Boolean basico)
     {
         this.nodos = pnodos;
         //this.transform.position = nodos[indice].transform.position;
         //indice++;
         empezo = true;
         linea.SetActive(true);
+        if (basico)
+        {
+            linea.GetComponent<LineRenderer>().startColor = Color.red;
+        }
+        else
+        {
+            linea.GetComponent<LineRenderer>().startColor = Color.cyan;
+        }
+        
         botonCancelar.SetActive(true);
         foreach (GameObject p in pnodos)
         {

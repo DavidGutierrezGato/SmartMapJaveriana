@@ -14,6 +14,8 @@ public class HistoricoPos : MonoBehaviour
     void Start()
     {
         nodoActual = sensor.masCercano.name;
+        //cambie null por el mismo nodo
+        //nodoAnterior = sensor.masCercano.name;
         nodoAnterior = null;
     }
 
